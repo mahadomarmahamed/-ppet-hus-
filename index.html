@@ -3,72 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>LBS Kreativa Gymnasiet</title>
+    <meta name="description" content="En kreativ LBS-inspirerad gymnasiesida med program, öppet hus och skolinformation.">
+    <title>LBS Kreativa Gymnasiet — Lund</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    <header class="navbar">
+<header class="site-header">
+    <a class="logo" href="#top" aria-label="LBS Kreativa Gymnasiet">
+        <img src="LBS_Logotyp_RGB_Vit.png" alt="LBS Kreativa Gymnasiet" class="lbs-logo">
+    </a>
 
-        <a href="#" class="logo">
-            <img src="LBS_Logotyp_RGB_Vit.png" alt="LBS Kreativa Gymnasiet">
-        </a>
+    <button class="menu-toggle" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 
-        <nav>
-            <a href="#skolan">Om skolan</a>
-            <a href="#program">Program</a>
-            <a href="#oppet-hus">Öppet hus</a>
-            <a href="#nyheter">Nyheter</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
+    <nav class="nav" aria-label="Huvudmeny">
+        <a href="#skolan">Skolan</a>
+        <a href="#program">Program</a>
+        <a href="#livet">Livet på LBS</a>
+        <a href="#oppet-hus">Öppet hus</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
 
-        <button class="menu-btn" id="menuBtn">
-            ☰
-        </button>
+    <a class="nav-cta" href="#oppet-hus">BESÖK OSS <span>↗</span></a>
+</header>
 
-    </header>
-
+<main id="top">
 
     <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-content reveal">
+            <div class="eyebrow">[ LBS LUND • KREATIVT GYMNASIUM ]</div>
+            <h1>DE BÄSTA<br><span>IDÉERNA</span> HAR<br>INGEN KOMMIT PÅ ÄN.</h1>
+            <p>Du har hjärnan. Vi har verktygen. Utveckla ditt kreativa tänkande och gör dina idéer till verklighet.</p>
 
-        <div class="hero-overlay"></div>
+            <div class="hero-actions">
+                <a class="button button-light" href="#program">UTFORSKA PROGRAM <span>↓</span></a>
+                <a class="button button-outline" href="#skolan">UPPTÄCK SKOLAN <span>→</span></a>
+            </div>
+        </div>
 
-        <div class="hero-content">
+        <div class="hero-tag">
+            <span>[01]</span>
+            <span>KREATIVITET</span>
+        </div>
+    </section>
 
-            <p class="hero-small">LBS KREATIVA GYMNASIET</p>
+    <section class="intro section" id="skolan">
+        <div class="section-label">[ 01 / OM SKOLAN ]</div>
+        <div class="intro-layout">
+            <div>
+                <p class="big-copy">EN PLATS FÖR DIG SOM VILL <span>SKAPA</span>, TESTA OCH UTVECKLAS.</p>
+            </div>
+            <div class="body-copy">
+                <p>LBS Kreativa Gymnasiet är för dig som vill kombinera ett kreativt intresse med en högskoleförberedande utbildning. Här möts teknik, skapande, projekt och människor som gillar att göra saker på riktigt.</p>
+                <p>Vi inspireras av branschen och låter idéer bli prototyper, produktioner och projekt.</p>
+                <a class="text-link" href="#livet">SÅ FUNKAR DET <span>→</span></a>
+            </div>
+        </div>
+    </section>
 
-            <h1>
-                DIN FRAMTID.<br>
-                DINA IDÉER.
-            </h1>
+    <section class="program-section section" id="program">
+        <div class="program-heading">
+            <div>
+                <div class="section-label">[ 02 / VÅRA PROGRAM ]</div>
+                <h2>VÄLJ DIN<br><span>RIKTNING.</span></h2>
+            </div>
+            <p>Sex profiler inom Teknikprogrammet och Estetiska programmet. Alla utbildningarna är högskoleförberedande.</p>
+        </div>
 
-            <p class="hero-text">
-                En kreativ gymnasieutbildning där teknik,
-                skapande och framtid möts.
-            </p>
+        <div class="program-grid">
 
-            <div class="hero-buttons">
-                <a href="#program" class="btn btn-primary">
-                    Våra program
-                </a>
+            <article class="program-card cyan reveal">
+                <div class="card-top"><span>01</span><span>TEKNIK</span></div>
+                <div class="card-icon">&lt;/&gt;</div>
+                <h3>AI&amp;<br>WEBB</h3>
+                <p>Programmera, bygg webbplatser och utforska hur AI kan användas för att skapa digitala lösningar.</p>
+                <div class="card-meta">
+                    <span>TEKNIKPROGRAMMET</span>
+                    <span>→</span>
+                </div>
+            </article>
 
-                <a href="#oppet-hus" class="btn btn-outline">
-                    Besök oss
-                </a>
+            <article class="program-card orange reveal">
+                <div class="card-top"><span>02</span><span>ESTET</span></div>
+                <div class="card-icon">◉</div>
+                <h3>FOTO<br>OCH FILM</h3>
+                <p>Berätta med kameran. Utforska foto, film, berättande och produktion i kreativa projekt.</p>
+                <div class="card-meta">
+                    <span>ESTETISKA PROGRAMMET</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="program-card magenta reveal">
+                <div class="card-top"><span>03</span><span>ESTET</span></div>
+                <div class="card-icon">✦</div>
+                <h3>GRAFISK<br>DESIGN</h3>
+                <p>Skapa visuella idéer och utveckla ditt uttryck inom form, typografi, illustration och design.</p>
+                <div class="card-meta">
+                    <span>ESTETISKA PROGRAMMET</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="program-card green reveal">
+                <div class="card-top"><span>04</span><span>ESTET</span></div>
+                <div class="card-icon">♫</div>
+                <h3>MUSIK-<br>PRODUKTION</h3>
+                <p>Skapa musik, arbeta med ljud och utveckla idéer från första skiss till färdig produktion.</p>
+                <div class="card-meta">
+                    <span>ESTETISKA PROGRAMMET</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="program-card yellow reveal">
+                <div class="card-top"><span>05</span><span>ESTET</span></div>
+                <div class="card-icon">▦</div>
+                <h3>SPEL-<br>GRAFIK</h3>
+                <p>Designa karaktärer, miljöer och visuella världar med 2D, 3D och digitala verktyg.</p>
+                <div class="card-meta">
+                    <span>ESTETISKA PROGRAMMET</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="program-card cyan-dark reveal">
+                <div class="card-top"><span>06</span><span>TEKNIK</span></div>
+                <div class="card-icon">⌁</div>
+                <h3>SPEL-<br>UTVECKLING</h3>
+                <p>Programmera spel och arbeta med teknik, fysik, design och utveckling från idé till färdig produkt.</p>
+                <div class="card-meta">
+                    <span>TEKNIKPROGRAMMET</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="statement section">
+        <div class="statement-mark">&lt; LBS / 2026 &gt;</div>
+        <h2>DU HAR IDÉN.<br><span>BYGG DEN.</span></h2>
+        <p>På LBS får du verktyg, projekt och en kreativ miljö där du kan utvecklas inom det du faktiskt gillar.</p>
+    </section>
+
+    <section class="life section" id="livet">
+        <div class="section-label">[ 03 / LIVET PÅ LBS ]</div>
+
+        <div class="life-grid">
+            <div class="life-feature">
+                <div class="pixel-corner"></div>
+                <span class="mono">01 — PROJEKT</span>
+                <h2>FRÅN<br>SKISS TILL<br><em>VERKLIGHET.</em></h2>
+                <p>Branschrealistiska projekt gör att du får använda dina kunskaper praktiskt och samarbeta med andra.</p>
             </div>
 
+            <div class="life-list">
+                <div class="life-item">
+                    <span>01</span>
+                    <div><strong>KREATIVA MILJÖER</strong><p>Miljöer byggda för att ge plats åt idéer och skapande.</p></div>
+                </div>
+                <div class="life-item">
+                    <span>02</span>
+                    <div><strong>MASTERCLASS</strong><p>Föreläsningar, workshops och möten med branschen.</p></div>
+                </div>
+                <div class="life-item">
+                    <span>03</span>
+                    <div><strong>PROGRAMÖVERSKRIDANDE</strong><p>Samarbeta med elever som har andra kreativa kompetenser.</p></div>
+                </div>
+                <div class="life-item">
+                    <span>04</span>
+                    <div><strong>LBS AWARDS</strong><p>Visa upp och hylla kreativa elevprojekt inom spel, media och musik.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="open-house section" id="oppet-hus">
+        <div class="open-house-content">
+            <div class="section-label">[ 04 / ÖPPET HUS ]</div>
+            <h2>SE VAR<br><span>DU PASSAR IN.</span></h2>
+            <p>Kom förbi, träffa elever och lärare och upplev miljön innan du bestämmer dig.</p>
+            <a class="button button-light" href="#kontakt">ANMÄL INTRESSE <span>↗</span></a>
+        </div>
+        <div class="open-house-date">
+            <span class="mono">NEXT EVENT</span>
+            <strong>ÖPPET<br>HUS</strong>
+            <span class="mono">LBS LUND</span>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer" id="kontakt">
+    <div class="footer-top">
+        
+        <div class="footer-column">
+            <span class="footer-label">NAVIGERA</span>
+            <a href="#skolan">Skolan</a>
+            <a href="#program">Program</a>
+            <a href="#livet">Livet på LBS</a>
+            <a href="#oppet-hus">Öppet hus</a>
         </div>
 
-        <div class="scroll-down">
-            <span>SCROLLA NER</span>
-            ↓
+        <div class="footer-column">
+            <span class="footer-label">KONTAKT</span>
+            <span>LBS Kreativa Gymnasiet Lund</span>
+            <span>Bredgatan 10</span>
+            <span>Lund</span>
+            <a href="mailto:lund@lbs.se">lund@lbs.se</a>
+            <a href="tel:046124450">046-12 44 50</a>
         </div>
+    </div>
 
-   
+    <div class="footer-bottom">
+        <span>© 2026 LBS KREATIVA GYMNASIET</span>
+        <span>[ DE BÄSTA IDÉERNA HAR INGEN KOMMIT PÅ ÄN. ]</span>
+        <a href="#top">↑ TOPPEN</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
