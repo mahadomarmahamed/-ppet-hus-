@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upptäck AI och webbutveckling på LBS-inspirerade programsidan.">
+    <title>AI & Webb | Kreativ utbildning</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        .program-page {
+            background: #101010;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .program-topbar {
+            padding: 22px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .program-logo {
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 900;
+            text-decoration: none;
+            letter-spacing: -0.04em;
+        }
+
+        .program-logo span {
+            color: #00e5ff;
+        }
+
+        .program-back {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: .85rem;
+        }
+
+        .program-back:hover {
+            color: #00e5ff;
+        }
+
+        .program-hero {
+            padding: clamp(65px, 10vw, 140px) 7%;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 90% 20%,
+                    rgba(0, 229, 255, .15), transparent 42%),
+                #101010;
+        }
+
+        .program-eyebrow {
+            color: #00e5ff;
+            font-size: .78rem;
+            font-weight: 800;
+            letter-spacing: .16em;
+            margin-bottom: 26px;
+        }
+
+        .program-hero h1 {
+            max-width: 1050px;
+            margin: 0;
+            font-size: clamp(3.5rem, 11vw, 9rem);
+            line-height: .88;
+            letter-spacing: -.075em;
+            text-transform: uppercase;
+        }
+
+        .program-hero h1 span {
+            color: #00e5ff;
+        }
+
+        .program-hero-bottom {
+            margin-top: 38px;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .program-hero-bottom p {
+            max-width: 570px;
+            color: #d0d0d0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .program-cta {
+            display: inline-block;
+            padding: 16px 22px;
+            background: #00e5ff;
+            color: #101010;
+            text-decoration: none;
+            font-weight: 900;
+            transition: transform .2s, background .2s;
+        }
+
+        .program-cta:hover {
+            transform: translateY(-3px);
+            background: #fff;
+        }
+
+        .program-section {
+            padding: clamp(60px, 9vw, 110px) 7%;
+        }
+
+        .program-section.light {
+            background: #f3f3f0;
+            color: #101010;
+        }
+
+        .program-section.dark {
+            background: #181818;
+            color: #fff;
+        }
+
+        .program-section-label {
+            color: #00a9bd;
+            font-size: .76rem;
+            font-weight: 900;
+            letter-spacing: .15em;
+            margin-bottom: 24px;
+        }
+
+        .program-section h2 {
+            max-width: 850px;
+            font-size: clamp(2.2rem, 6vw, 5rem);
+            letter-spacing: -.055em;
+            line-height: .98;
+            text-transform: uppercase;
+            margin: 0 0 28px;
+        }
+
+        .program-intro {
+            max-width: 760px;
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .program-topic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 44px;
+        }
+
+        .program-topic {
+            padding: 28px;
+            min-height: 180px;
+            border: 1px solid #444;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+            transition: background .2s, color .2s, transform .2s;
+        }
+
+        .program-topic:hover {
+            background: #00e5ff;
+            color: #101010;
+            transform: translateY(-5px);
+        }
+
+        .program-topic span {
+            font-size: .8rem;
+            font-weight: 800;
+        }
+
+        .program-topic h3 {
+            font-size: 1.4rem;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        .program-facts {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            border-top: 1px solid #444;
+            margin-top: 40px;
+        }
+
+        .program-fact {
+            padding: 25px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .program-fact:nth-child(odd) {
+            margin-right: 25px;
+        }
+
+        .program-fact span {
+            display: block;
+            color: #00cfe6;
+            font-size: .76rem;
+            font-weight: 800;
+            letter-spacing: .1em;
+            margin-bottom: 10px;
+        }
+
+        .program-fact strong {
+            font-size: 1.05rem;
+        }
+
+        .program-bottom {
+            padding: 80px 7%;
+            background: #00e5ff;
+            color: #101010;
+        }
+
+        .program-bottom h2 {
+            font-size: clamp(2.5rem, 7vw, 6rem);
+            line-height: .95;
+            letter-spacing: -.06em;
+            text-transform: uppercase;
+            max-width: 850px;
+            margin: 0 0 30px;
+        }
+
+        .program-bottom a {
+            display: inline-block;
+            color: #101010;
+            border: 2px solid #101010;
+            padding: 15px 20px;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        .program-bottom a:hover {
+            background: #101010;
+            color: #00e5ff;
+        }
+
+        .program-footer {
+            padding: 25px 7%;
+            background: #101010;
+            color: #aaa;
+            font-size: .85rem;
+        }
+
+        @media (max-width: 700px) {
+            .program-topbar {
+                padding: 18px 5%;
+            }
+
+            .program-topic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-topic {
+                min-height: 140px;
+            }
+
+            .program-facts {
+                grid-template-columns: 1fr;
+            }
+
+            .program-fact:nth-child(odd) {
+                margin-right: 0;
+            }
+
+            .program-hero,
+            .program-section,
+            .program-bottom {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .program-topic,
+            .program-cta {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="program-page">
+
+    <header class="program-topbar">
+        <a class="program-logo" href="index.html">
+        </a>
+
+        <a class="program-back" href="index.html#program">
+            ← ALLA PROGRAM
+        </a>
+    </header>
+
+    <main>
+        <section class="program-hero">
+            <div class="program-eyebrow">
+                [ UTFORSKA PROGRAMMET ]
+            </div>
+
+            <h1>AI &<br><span>WEBB</span></h1>
+
+            <div class="program-hero-bottom">
+                <p>
+                    Gillar du teknik, programmering och digital kreativitet?
+                    Utforska hur webbplatser, digitala tjänster och AI-lösningar
+                    kan utvecklas från idé till färdig produkt.
+                </p>
+
+                <a class="program-cta" href="#om-programmet">
+                    UPPTÄCK UTBILDNINGEN ↓
+                </a>
+            </div>
+        </section>
+
+        <section class="program-section light" id="om-programmet">
+            <div class="program-section-label">
+                [ 01 — OM UTBILDNINGEN ]
+            </div>
+
+            <h2>SKAPA DET SOM KOMMER HÄRNÄST.</h2>
+
+            <p class="program-intro">
+                På en utbildning med fokus på AI och webbutveckling får du
+                utforska samspelet mellan teknik och kreativitet. Du kan
+                arbeta med digitala idéer, lära dig att tänka lösningsorienterat
+                och undersöka hur kod kan användas för att skapa användbara
+                digitala upplevelser.
+            </p>
+        </section>
+
+        <section class="program-section dark">
+            <div class="program-section-label">
+                [ 02 — DET HÄR KAN DU UTFORSKA ]
+            </div>
+
+            <h2>FRÅN IDÉ TILL DIGITAL VERKLIGHET.</h2>
+
+            <div class="program-topic-grid">
+                <article class="program-topic">
+                    <span>01 / KOD</span>
+                    <h3>Programmering och logik ↗</h3>
+                </article>
+
+                <article class="program-topic">
+                    <span>02 / WEBB</span>
+                    <h3>Webbplatser och digitala lösningar ↗</h3>
+                </article>
+
+                <article class="program-topic">
+                    <span>03 / AI</span>
+                    <h3>Artificiell intelligens och teknik ↗</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="program-section light">
+        
+        </section>
+
+        <section class="program-bottom">
+            <h2>REDO ATT HITTA DIN RIKTNING?</h2>
+
+            <a href="index.html#program">
+                ← TILL ALLA PROGRAM
+            </a>
+        </section>
+
+        
+    </main>
+
+</body>
+</html>

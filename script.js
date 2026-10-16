@@ -1,6 +1,6 @@
 
 /* =========================
-   LBS INTERACTIVE WEBSITE
+   LBS INTERAKTIV WEBBPLATS
 ========================= */
 
 const menuToggle = document.querySelector(".menu-toggle");
@@ -15,7 +15,7 @@ const openHouse = document.querySelector("#oppet-hus");
 const footer = document.querySelector("#kontakt");
 
 /* =========================
-   PAGE SETUP
+   SIDINSTÄLLNINGAR
 ========================= */
 
 const pages = {
@@ -32,7 +32,7 @@ function showPage(pageName) {
 
     currentPage = pageName;
 
-    // Hide all sections belonging to other pages
+    // Döljer alla sektioner som hör till andra sidor
     Object.values(pages).flat().forEach(section => {
         if (section) {
             section.classList.add("step-hidden");
@@ -40,7 +40,7 @@ function showPage(pageName) {
         }
     });
 
-    // Show the requested page
+    // Visar den begärda sidan
     pages[pageName].forEach(section => {
         if (!section) return;
 
@@ -51,7 +51,7 @@ function showPage(pageName) {
         section.classList.add("page-enter");
     });
 
-    // Update navigation
+    // Updaterar navigation
     document.querySelectorAll(".nav a").forEach(link => {
         link.classList.toggle(
             "active",
@@ -59,7 +59,7 @@ function showPage(pageName) {
         );
     });
 
-    // Close the mobile menu
+    // stänger huvued menyn 
     nav?.classList.remove("open");
     menuToggle?.setAttribute("aria-expanded", "false");
 
@@ -100,7 +100,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Make the main buttons open the correct page
+// Gör att huvudknapparna öppnar rätt sida
 document.querySelectorAll(".hero-actions a").forEach(link => {
     link.addEventListener("click", event => {
         event.preventDefault();
@@ -116,7 +116,7 @@ document.querySelectorAll(".hero-actions a").forEach(link => {
 });
 
 /* =========================
-   NEXT-PAGE BUTTONS
+   NEXT-PAGE BUTTON
 ========================= */
 
 function addNextButton(container, text, nextPage) {
@@ -247,7 +247,7 @@ function createQuiz() {
         </div>
     `;
 
-    // Place the quiz above the program cards
+    // quiz ovanför programerna 
     const grid = programs?.querySelector(".program-grid");
 
     if (grid) {
@@ -370,7 +370,7 @@ function showQuizResult() {
         renderQuestion();
     });
 
-    // Highlight the suggested program card
+    // Highlight för den visar vilket program som passar dig 
     const cards = programs.querySelectorAll(".program-card");
 
     cards.forEach(card => {
@@ -453,3 +453,4 @@ function observeReveals() {
 createQuiz();
 showPage("home");
 observeReveals();
+
